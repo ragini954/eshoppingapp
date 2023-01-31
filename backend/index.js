@@ -18,12 +18,14 @@ app.post("/register", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   if (req.body.email && req.body.password) {
-    let user = await User.findOne(req.body).select("-password");
+    let user = await User.findOne(req.body).select("password");
     if (user) {
       res.send(user);
+    } else {
+      res.send({ result: "No User found" });
     }
   } else {
-    res.send({ result: "No User found" });
+    res.send({ result: "Fill all the details" });
   }
 });
 

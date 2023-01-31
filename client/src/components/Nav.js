@@ -25,10 +25,12 @@ export const Nav = () => {
         <li>
           <Link to="/profile">Profile</Link>
         </li>
-        <li>
-        {auth ? <Link to="/signup" onClick={logoutHandler}>Logout</Link>
-        : <Link to="/signup">SignUp</Link>}
-        </li>
+        {auth ? <li><Link to="/signup" onClick={logoutHandler}>Logout</Link></li>
+        :<>
+        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/signup">SignUp</Link></li>
+        </>}
+        
       </ul>
     </div>
   );
