@@ -71,9 +71,22 @@
           border: 1px solid;
           cursor:pointer;
       }
-      .register{
+      .register,.login{
         margin-left: 30%;
       }
       .label{
         margin-left: 5%;
       }
+      .nav-right{
+        text-align: right;
+        padding-right: 50px;
+      }
+      .logo{
+          width: 37px;
+          float: left;
+          border: -20px;
+          border-radius: 45px;
+          margin-top: 3px;
+          margin-left: 4px;
+      }
+      
