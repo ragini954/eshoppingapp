@@ -14,6 +14,7 @@ export const Login = () => {
     })
     
     const collectData=async(e)=>{
+      e.preventDefault();
          console.warn("email","password",email,password)
            let result= await fetch('http://localhost:5000/login',
            {
@@ -35,15 +36,15 @@ export const Login = () => {
         }
      
   return (
-    <div className="login">
+    <form>
             <h1>Login</h1>
             <input className="inputBox" type="text" placeholder="Enter Email" 
-            onChange={(e)=>setEmail(e.target.value)}/>
+            onChange={(e)=>setEmail(e.target.value)} />
 
             <input className="inputBox" type="password" placeholder="Enter Password" 
             onChange={(e)=>setPassword(e.target.value)}/>
 
-            <button className="appButton" type="button" onClick={collectData}>Login</button>
-    </div>
+            <button onClick={collectData} className="appButton">Login</button>
+    </form>
   )
 }
