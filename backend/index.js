@@ -35,6 +35,18 @@ app.post('/add',async(req,res)=>{
   let result=await product.save()
   res.send(result)
 })
+
+app.get('/products',async(req,res)=>{
+const products=await Product.find()
+if(products.length>0)
+{
+  res.send(products)
+}
+else{
+  res.send({result:"No Product Found"})
+}
+})
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });

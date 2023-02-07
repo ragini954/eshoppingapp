@@ -36,7 +36,7 @@ export const Login = () => {
         }
      
   return (
-    <form>
+    <form className="register">
             <h1>Login</h1>
             <input className="inputBox" type="text" placeholder="Enter Email" 
             onChange={(e)=>setEmail(e.target.value)} />
