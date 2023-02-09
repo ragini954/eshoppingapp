@@ -89,4 +89,13 @@
           margin-top: 3px;
           margin-left: 4px;
       }
-      
+     .product-list tr td{
+        border: 1px solid skyblue;
+        padding:10px;
+        width:150px;
+     } 
+    .product-list{
+      text-align: center;
+      margin-left: 350px;
+      margin-top: 50px;
+    }
