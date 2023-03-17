@@ -99,3 +99,11 @@
       margin-left: 200px;
       margin-top: 50px;
     }
+    .search
+    {
+      padding: 10px;
+      width: 250px;
+      margin-bottom: 20px;
+      margin-left: -255px;
+      border: solid lightblue;
+    }

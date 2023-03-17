@@ -26,9 +26,10 @@ export const Login = () => {
             })
            result=await result.json()
            console.warn(result) 
-           if(result.name){
+           if(result){
             navigate('/')
-            localStorage.setItem("user",JSON.stringify(result))
+            localStorage.setItem("user",JSON.stringify(result.user))
+            localStorage.setItem("token",JSON.stringify(result.auth))
            }
            else{
             alert('Please Enter the correct details !!')
